@@ -3,6 +3,8 @@
 // Partly derived from Sam Soffes' Custom-Licensed SSToolkit: http://github.com/samsoffes/sstoolkit
 // Partly derived from jverkoys' Nimbus-Project: http://github.com/jverkoy/nimbus
 
+#import <UIKit/UIKit.h>
+
 ////////////////////////////////////////////////////////////////////////
 #pragma mark - CGRect Helper
 ////////////////////////////////////////////////////////////////////////
@@ -137,7 +139,7 @@ NS_INLINE CGPoint FKPointIntegral(CGPoint point) {
  directly to a UIWindow and doesn't automatically have its transformation modified.
  */
 
-NS_INLINE CGAffineTransform FKRotationTransformForOrientation(UIInterfaceOrientation orientation) {
+NS_INLINE CGAffineTransform FKRotationTransformForOrientation(enum UIInterfaceOrientation orientation) {
     if (orientation == UIInterfaceOrientationLandscapeLeft) {
         return CGAffineTransformMakeRotation((CGFloat)(M_PI * 1.5));
         
